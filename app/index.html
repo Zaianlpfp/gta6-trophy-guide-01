@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI · All 55 Trophies</title>
+<meta name="description" content="An offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, cited guides, a platinum roadmap, missable flags and a checklist that saves in your browser.">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide &amp; tracker</p>
+    <h1>LEONIDA TROPHY GUIDE</h1>
+    <p class="subtitle">All 55 trophies — official names, descriptions &amp; grades, a guide for each one with its sources, a roadmap to the Platinum, and a checklist that remembers you.</p>
+  </div>
+  <div class="platinum-card" aria-label="Platinum progress">
+    <p class="platinum-name">★ Vice Got a Price!</p>
+    <p class="platinum-sub">Platinum · earn the other 54</p>
+    <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55</span></p>
+    <div class="progress" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-label" id="progressLabel">0% to the Platinum</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="checklist" id="tabChecklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap" id="tabRoadmap">Platinum roadmap</button>
+  <button type="button" class="tab" data-view="missable" id="tabMissable">Missable ⚠ <span id="missableCount"></span></button>
+</nav>
+
+<section class="toolbar" aria-label="Tracker controls">
+  <label class="search">Search
+    <input type="search" id="searchInput" placeholder="Search a trophy, mission or place…" autocomplete="off">
+  </label>
+  <fieldset class="filters" id="filterGroup">
+    <legend>Filter by kind</legend>
+    <button type="button" class="chip active" data-filter="all">All <b id="countAll"></b></button>
+    <button type="button" class="chip" data-filter="story">Story <b id="countStory"></b></button>
+    <button type="button" class="chip" data-filter="missable">Missable <b id="countMissable"></b></button>
+    <button type="button" class="chip" data-filter="collectibles">Collectibles <b id="countCollectibles"></b></button>
+    <button type="button" class="chip" data-filter="activities">Activities <b id="countActivities"></b></button>
+    <button type="button" class="chip" data-filter="online">Online <b id="countOnline"></b></button>
+  </fieldset>
+  <label class="spoiler-toggle">
+    <input type="checkbox" id="spoilerToggle">
+    <span>Hide story spoilers — story trophy names &amp; descriptions stay hidden until earned</span>
+  </label>
+  <div class="io-buttons">
+    <button type="button" id="exportBtn">Export progress ↓</button>
+    <button type="button" id="importBtn">Import progress ↑</button>
+    <input type="file" id="importFile" accept=".json,application/json" hidden>
+    <button type="button" id="resetBtn" class="quiet">Reset</button>
+  </div>
+  <p class="io-note" id="ioNote" role="status">Progress saves in this browser (localStorage). Export downloads a .json file you can import back.</p>
+</section>
+
+<main>
+  <section id="viewChecklist" class="view">
+    <div class="layout">
+      <div class="list-col">
+        <p class="list-heading" id="listHeading">All trophies</p>
+        <p class="empty-note" id="emptyNote" hidden>No trophies match this filter. There are no online trophies in GTA VI — every one of the 55 is single-player and offline, so the Online filter is empty by design.</p>
+        <ol class="trophy-list" id="trophyList"></ol>
+      </div>
+      <aside class="detail-col" id="detailPanel" aria-live="polite"></aside>
+    </div>
+  </section>
+
+  <section id="viewRoadmap" class="view" hidden>
+    <h2 id="roadmapTitle">Roadmap to the Platinum</h2>
+    <p class="roadmap-est" id="roadmapEst"></p>
+    <ol class="roadmap" id="roadmapList"></ol>
+    <p class="roadmap-source">Roadmap built from the official trophy descriptions. Source: PowerPyx — GTA 6 Trophy Guide &amp; Roadmap. <a href="https://www.powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap/">powerpyx.com/gta-6-grand-theft-auto-vi-trophy-guide-roadmap</a></p>
+  </section>
+
+  <section id="viewMissable" class="view" hidden>
+    <h2>Missable trophies</h2>
+    <p>There is <strong>one</strong> potentially missable trophy in GTA VI. Everything else can be earned in free roam after the story, because there is no mission replay — so a missed meditation cannot be redone without an earlier save. Keep a manual save at the start of every chapter.</p>
+    <ol class="trophy-list" id="missableList"></ol>
+    <p class="source-line">Source: PowerPyx — GTA 6 Trophy Guide &amp; Roadmap and GTABase, both flagging Positive Mental Attitude as the only potentially missable trophy.</p>
+  </section>
+</main>
+
+<footer>
+  <p><strong>About this guide.</strong> Trophy names, descriptions and grades are shown as PlayStation publishes them (list as mirrored by Exophase and PSNProfiles, agreeing on every entry). Every guide is written in my own words for this page and names its sources beside it; where a method is still unconfirmed at launch, the guide says so instead of inventing one. Nothing here uses Rockstar's logo, artwork, box art or game screenshots — the look is original. This page works fully offline and makes no network requests.</p>
+  <p class="sources-footer">Sources used across this guide: PowerPyx — GTA 6 Trophy Guide &amp; Roadmap · KeenGamer — GTA 6 Trophy Guide &amp; Platinum Roadmap · Output Lag — GTA 6 Trophy List · EGamers — GTA 6 Trophy List · PlayStation trophy list as mirrored by Exophase / PSNProfiles.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
